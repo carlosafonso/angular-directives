@@ -1,0 +1,64 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/*
+ * caStagebar
+ */
+.stagebar {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.stage {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.stage-name,
+.stage-icon {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+
+	&.stage-icon {
+		position: relative;
+		margin-bottom: 10px;
+
+		/* as per http://codepen.io/ericrasch/pen/Irlpm */
+		&:before {
+			position: absolute;
+			top: 50%; left: 0; right: 0; bottom: 0;
+			margin: 0 auto;
+			width: 100%;
+			z-index: -1;
+			content: "";
+			border-top: 1px solid black;
+		}
+
+		i {
+			padding: 10px;
+			background-color: white;
+			border: 1px solid black;
+			border-radius: 50%;
+		}
+	}
+}
+
+.stage.completed .stage-name,
+.stage.completed .stage-icon {
+	font-weight: bold;
+
+	&.stage-icon i {
+		color: white;
+		background-color: black;
+		border-color: black;
+	}
+}
+/*
+ * End of caStagebar
+ */

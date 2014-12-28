@@ -1,0 +1,8 @@
+<ul class="stagebar">
+	<li class="stage completed" ng-repeat="stage in availableStages">
+		<div class="stage-icon" ng-if="stage.icon">
+			<i class="{{ baseIconClass }} {{ stage.icon }}"></i>
+		</div>
+		<span class="stage-name">{{ stage.name }}</span>
+	</li>
+</ul>
